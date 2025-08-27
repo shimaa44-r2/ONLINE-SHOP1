@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض والخصومات - OnlineShop</title>
+    <meta name="description" content="استفد من أفضل العروض والخصومات الحصرية على منتجاتنا">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/offers.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- الهيدر -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html">Online<span>Shop</span> <i
+                                class="fas fa-shopping-bag"></i></a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="ابحث عن منتج أو فئة...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="header-actions">
+                        <div class="header-action">
+                            <a href="auth.html">
+                                <i class="fas fa-user"></i>
+                                <span>تسجيل الدخول</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="favorites.html">
+                                <i class="fas fa-heart"></i>
+                                <span>المفضلة</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>السلة</span>
+                            </a>
+                            <span class="cart-count">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i>
+                                الرئيسية</a></li>
+                        <li><a href="products.html"><i class="fas fa-box"></i>
+                                المنتجات</a></li>
+                        <li><a href="categories.html"><i
+                                    class="fas fa-list"></i>
+                                الأقسام</a></li>
+                        <li><a href="offers.html"><i class="fas fa-percent"></i>
+                                العروض</a></li>
+                        <li><a href="about.html"><i
+                                    class="fas fa-info-circle"></i> عنا</a></li>
+                        <li><a href="contact.html"><i
+                                    class="fas fa-headset"></i> اتصل
+                                بنا</a></li>
+                    </ul>
+
+                    <div class="header-action">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>توصيل إلى الرياض</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- محتوى الصفحة -->
+    <div class="container page-content">
+        <h1 class="page-title">العروض والخصومات</h1>
+        
+        <div class="offers-container">
+            <!-- عرض رئيسي -->
+            <div class="main-offer">
+                <div class="offer-content">
+                    <h2>عروض الجمعة البيضاء</h2>
+                    <p>خصومات تصل إلى 70% على جميع المنتجات. العرض ساري حتى نهاية الأسبوع</p>
+                    
+                    <div class="offer-timer">
+                        <div class="timer-unit">
+                            <div class="timer-value">02</div>
+                            <div class="timer-label">أيام</div>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value">12</div>
+                            <div class="timer-label">ساعات</div>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value">45</div>
+                            <div class="timer-label">دقائق</div>
+                        </div>
+                        <div class="timer-unit">
+                            <div class="timer-value">18</div>
+                            <div class="timer-label">ثواني</div>
+                        </div>
+                    </div>
+                    
+                    <a href="products.html?offer=black-friday" class="btn">استفد من العرض</a>
+                </div>
+                
+                <div class="offer-image">
+                    <img src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="عروض الجمعة البيضاء">
+                </div>
+            </div>
+            
+            <!-- تصفية العروض -->
+            <div class="offers-filter">
+                <button class="filter-btn active" data-filter="all">جميع العروض</button>
+                <button class="filter-btn" data-filter="today">عروض اليوم</button>
+                <button class="filter-btn" data-filter="week">عروض الأسبوع</button>
+                <button class="filter-btn" data-filter="month">عروض الشهر</button>
+                <button class="filter-btn" data-filter="ending">عروض تنتهي قريباً</button>
+            </div>
+            
+            <!-- قائمة العروض -->
+            <div class="offers-grid">
+                <!-- سيتم إضافة العروض ديناميكياً عبر JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>OnlineShop</h3>
+                    <p>متجرك الإلكتروني الموثوق لتجربة تسوق فريدة مع أفضل المنتجات وأسرع التوصيل</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#">أسئلة شائعة</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">طرق الدفع</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>عن المتجر</h3>
+                    <ul>
+                        <li><a href="about.html">عن OnlineShop</a></li>
+                        <li><a href="#">فروعنا</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والمنتجات الجديدة</p>
+                    
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني">
+                        <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 OnlineShop. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/offers.js"></script>
+</body>
+</html>

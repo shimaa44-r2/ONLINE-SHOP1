@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>المفضلة - OnlineShop</title>
+        <meta name="description"
+            content="استعرض منتجاتك المفضلة واحفظها للشراء لاحقاً">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/favorites.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <!-- الهيدر -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html">Online<span>Shop</span> <i
+                                class="fas fa-shopping-bag"></i></a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="ابحث عن منتج أو فئة...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="header-actions">
+                        <div class="header-action">
+                            <a href="auth.html">
+                                <i class="fas fa-user"></i>
+                                <span>تسجيل الدخول</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="favorites.html">
+                                <i class="fas fa-heart"></i>
+                                <span>المفضلة</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>السلة</span>
+                            </a>
+                            <span class="cart-count">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i>
+                                الرئيسية</a></li>
+                        <li><a href="products.html"><i class="fas fa-box"></i>
+                                المنتجات</a></li>
+                        <li><a href="categories.html"><i
+                                    class="fas fa-list"></i>
+                                الأقسام</a></li>
+                        <li><a href="offers.html"><i class="fas fa-percent"></i>
+                                العروض</a></li>
+                        <li><a href="about.html"><i
+                                    class="fas fa-info-circle"></i> عنا</a></li>
+                        <li><a href="contact.html"><i
+                                    class="fas fa-headset"></i> اتصل
+                                بنا</a></li>
+                    </ul>
+
+                    <div class="header-action">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>توصيل إلى الرياض</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- محتوى الصفحة -->
+        <div class="container page-content">
+            <h1 class="page-title">منتجاتك المفضلة</h1>
+
+            <div class="favorites-container">
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label>ترتيب حسب:</label>
+                        <select class="sort-select">
+                            <option value="date">الأحدث</option>
+                            <option value="price-low">السعر: من الأقل
+                                للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى
+                                للأقل</option>
+                            <option value="name">الاسم</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>عرض:</label>
+                        <select class="view-select">
+                            <option value="grid">شبكة</option>
+                            <option value="list">قائمة</option>
+                        </select>
+                    </div>
+
+                    <button class="clear-favorites">مسح الكل</button>
+                </div>
+
+                <div class="favorites-content">
+                    <div class="favorites-grid" id="favoritesGrid">
+                        <!-- سيتم إضافة المنتجات المفضلة ديناميكياً عبر JavaScript -->
+                    </div>
+
+                    <div class="empty-favorites" id="emptyFavorites">
+                        <i class="fas fa-heart"></i>
+                        <h3>قائمة المفضلة فارغة</h3>
+                        <p>لم تقم بإضافة أي منتجات إلى المفضلة بعد</p>
+                        <a href="products.html" class="btn">استعرض المنتجات</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الفوتر -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>OnlineShop</h3>
+                        <p>متجرك الإلكتروني الموثوق لتجربة تسوق فريدة مع أفضل
+                            المنتجات وأسرع التوصيل</p>
+
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>خدمة العملاء</h3>
+                        <ul>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                            <li><a href="#">أسئلة شائعة</a></li>
+                            <li><a href="#">سياسة الإرجاع</a></li>
+                            <li><a href="#">طرق الدفع</a></li>
+                            <li><a href="#">تتبع الطلب</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>عن المتجر</h3>
+                        <ul>
+                            <li><a href="about.html">عن OnlineShop</a></li>
+                            <li><a href="#">فروعنا</a></li>
+                            <li><a href="#">الوظائف</a></li>
+                            <li><a href="#">الشروط والأحكام</a></li>
+                            <li><a href="#">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والمنتجات
+                            الجديدة</p>
+
+                        <div class="newsletter-form">
+                            <input type="email" class="newsletter-input"
+                                placeholder="بريدك الإلكتروني">
+                            <button class="newsletter-btn"><i
+                                    class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>© 2023 OnlineShop. جميع الحقوق محفوظة</p>
+                </div>
+            </div>
+        </footer>
+
+        <button id="backToTop" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <script src="js/script.js"></script>
+        <script src="js/favorites.js"></script>
+        <script src="js/search.js"></script>
+    </body>
+</html>

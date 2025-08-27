@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - OnlineShop</title>
+    <meta name="description" content="تواصل مع فريق الدعم لدينا لأي استفسارات أو مساعدة">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- الهيدر -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html">Online<span>Shop</span> <i
+                                class="fas fa-shopping-bag"></i></a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="ابحث عن منتج أو فئة...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="header-actions">
+                        <div class="header-action">
+                            <a href="auth.html">
+                                <i class="fas fa-user"></i>
+                                <span>تسجيل الدخول</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="favorites.html">
+                                <i class="fas fa-heart"></i>
+                                <span>المفضلة</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>السلة</span>
+                            </a>
+                            <span class="cart-count">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i>
+                                الرئيسية</a></li>
+                        <li><a href="products.html"><i class="fas fa-box"></i>
+                                المنتجات</a></li>
+                        <li><a href="categories.html"><i
+                                    class="fas fa-list"></i>
+                                الأقسام</a></li>
+                        <li><a href="offers.html"><i class="fas fa-percent"></i>
+                                العروض</a></li>
+                        <li><a href="about.html"><i
+                                    class="fas fa-info-circle"></i> عنا</a></li>
+                        <li><a href="contact.html"><i
+                                    class="fas fa-headset"></i> اتصل
+                                بنا</a></li>
+                    </ul>
+
+                    <div class="header-action">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>توصيل إلى الرياض</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- محتوى الصفحة -->
+    <div class="container page-content">
+        <h1 class="page-title">اتصل بنا</h1>
+        
+        <div class="contact-page">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>عنواننا</h3>
+                    <p>الرياض، المملكة العربية السعودية</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>هاتفنا</h3>
+                    <p>+966 12 345 6789</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>بريدنا الإلكتروني</h3>
+                    <p>info@onlineshop.com</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>ساعات العمل</h3>
+                    <p>الأحد - الخميس: 8 ص - 5 م</p>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h2>أرسل رسالة</h2>
+                    <p>سنكون سعداء بالرد على استفساراتك في أقرب وقت ممكن</p>
+                </div>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">الموضوع *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">الرسالة *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn submit-btn">إرسال الرسالة</button>
+                </form>
+                
+                <div id="formSuccess" class="success-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <p>تم إرسال رسالتك بنجاح! سنرد عليك في أقرب وقت ممكن.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- خريطة الموقع -->
+        <div class="map-section">
+            <h2>موقعنا على الخريطة</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36206.53645490201!2d46.67236136943305!3d24.813893533375716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3e9dd8cf6d5%3A0x5d2e474af2e120e!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1685622345678!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>OnlineShop</h3>
+                    <p>متجرك الإلكتروني الموثوق لتجربة تسوق فريدة مع أفضل المنتجات وأسرع التوصيل</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#">أسئلة شائعة</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">طرق الدفع</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>عن المتجر</h3>
+                    <ul>
+                        <li><a href="about.html">عن OnlineShop</a></li>
+                        <li><a href="#">فروعنا</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والمنتجات الجديدة</p>
+                    
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني">
+                        <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 OnlineShop. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

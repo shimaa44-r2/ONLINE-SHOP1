@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة التسوق - OnlineShop</title>
+    <meta name="description" content="إدارة سلة التسوق الخاصة بك في متجرنا الإلكتروني">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- الهيدر -->
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html">Online<span>Shop</span> <i
+                                class="fas fa-shopping-bag"></i></a>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="ابحث عن منتج أو فئة...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="header-actions">
+                        <div class="header-action">
+                            <a href="auth.html">
+                                <i class="fas fa-user"></i>
+                                <span>تسجيل الدخول</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="favorites.html">
+                                <i class="fas fa-heart"></i>
+                                <span>المفضلة</span>
+                            </a>
+                        </div>
+                        <div class="header-action">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>السلة</span>
+                            </a>
+                            <span class="cart-count">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i>
+                                الرئيسية</a></li>
+                        <li><a href="products.html"><i class="fas fa-box"></i>
+                                المنتجات</a></li>
+                        <li><a href="categories.html"><i
+                                    class="fas fa-list"></i>
+                                الأقسام</a></li>
+                        <li><a href="offers.html"><i class="fas fa-percent"></i>
+                                العروض</a></li>
+                        <li><a href="about.html"><i
+                                    class="fas fa-info-circle"></i> عنا</a></li>
+                        <li><a href="contact.html"><i
+                                    class="fas fa-headset"></i> اتصل
+                                بنا</a></li>
+                    </ul>
+
+                    <div class="header-action">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>توصيل إلى الرياض</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+    <!-- محتوى الصفحة -->
+    <div class="container page-content">
+        <h1 class="page-title">سلة التسوق</h1>
+        
+        <div id="alertMessage" class="alert alert-success" style="display: none;">
+            <span id="alertText"></span>
+            <button class="close-alert">&times;</button>
+        </div>
+        
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="iPhone 13 Pro">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">iPhone 13 Pro</h3>
+                        <div class="item-price">3,499 ر.س</div>
+                        <div class="item-actions">
+                            <button class="action-btn save"><i class="far fa-heart"></i> حفظ للمفضلة</button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity-value">1</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <div class="item-total">3,499 ر.س</div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="حذاء رياضي">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">حذاء رياضي نايك</h3>
+                        <div class="item-price">349 ر.س</div>
+                        <div class="item-actions">
+                            <button class="action-btn save"><i class="far fa-heart"></i> حفظ للمفضلة</button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity-value">2</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <div class="item-total">698 ر.س</div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="ساعة أبل">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">ساعة أبل Series 7</h3>
+                        <div class="item-price">1,499 ر.س</div>
+                        <div class="item-actions">
+                            <button class="action-btn save"><i class="far fa-heart"></i> حفظ للمفضلة</button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity-value">1</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <div class="item-total">1,499 ر.س</div>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <h2 class="summary-title">ملخص الطلب</h2>
+                
+                <div class="summary-row">
+                    <span class="summary-label">السعر الإجمالي</span>
+                    <span class="summary-value" id="subtotal">5,696 ر.س</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span class="summary-label">خصم</span>
+                    <span class="summary-value">- 200 ر.س</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span class="summary-label">تكلفة الشحن</span>
+                    <span class="summary-value">25 ر.س</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span class="summary-label">الضريبة</span>
+                    <span class="summary-value" id="tax">285 ر.س</span>
+                </div>
+                
+                <div class="summary-row summary-total">
+                    <span class="summary-label">المبلغ الإجمالي</span>
+                    <span class="summary-value" id="total">5,806 ر.س</span>
+                </div>
+                
+                <a href="checkout.html" class="checkout-btn">إتمام الشراء</a>
+                <a href="products.html" class="continue-shopping">مواصلة التسوق</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>OnlineShop</h3>
+                    <p>متجرك الإلكتروني الموثوق لتجربة تسوق فريدة مع أفضل المنتجات وأسرع التوصيل</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="#">أسئلة شائعة</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">طرق الدفع</a></li>
+                        <li><a href="#">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>عن المتجر</h3>
+                    <ul>
+                        <li><a href="about.html">عن OnlineShop</a></li>
+                        <li><a href="#">فورشنا</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر العروض والمنتجات الجديدة</p>
+                    
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني">
+                        <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 OnlineShop. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
