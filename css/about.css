@@ -1,0 +1,277 @@
+/* تنسيقات عامة لصفحة About */
+.about-page {
+    padding: 2rem 0;
+}
+
+.page-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+/* قسم المقدمة */
+.about-intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.intro-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.intro-content h2 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.intro-content p {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.intro-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.intro-image:hover {
+    transform: translateY(-5px);
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* قسم الرسالة والرؤية والقيم */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mv-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mv-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.mv-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.mv-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* قسم الإحصائيات */
+.stats-section {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+    color: white;
+    text-align: center;
+}
+
+.stats-section h2 {
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-item {
+    padding: 1.5rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* قسم فريق العمل */
+.team-section {
+    margin-bottom: 3rem;
+}
+
+.team-section > h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.team-section > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    overflow: hidden;
+    height: 300px;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.member-info h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.member-role {
+    color: #3498db;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.member-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* التنسيقات المتجاوبة */
+@media (max-width: 992px) {
+    .about-intro {
+        flex-direction: column;
+    }
+    
+    .intro-content, .intro-image {
+        width: 100%;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .mv-card, .team-member {
+        padding: 1.5rem;
+    }
+    
+    .member-image {
+        height: 250px;
+    }
+}

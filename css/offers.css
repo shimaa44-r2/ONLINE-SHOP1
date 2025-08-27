@@ -1,0 +1,244 @@
+/* صفحة العروض */
+.offers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.main-offer {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    border-radius: 15px;
+    padding: 40px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.main-offer h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.main-offer p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.offer-timer {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.timer-unit {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.timer-value {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.timer-label {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.offer-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offers-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--danger);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.offer-card .product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.offer-card .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.offer-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.offer-card .product-info {
+    padding: 20px;
+}
+
+.offer-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.original-price {
+    font-size: 16px;
+    color: var(--dark-gray);
+    text-decoration: line-through;
+}
+
+.discount {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.offer-timer-small {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.timer-unit-small {
+    background: var(--light);
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 40px;
+}
+
+.timer-value-small {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.timer-label-small {
+    font-size: 10px;
+    color: var(--dark-gray);
+}
+
+@media (max-width: 992px) {
+    .main-offer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .offer-timer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .offers-filter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-offer {
+        padding: 25px;
+    }
+    
+    .main-offer h2 {
+        font-size: 28px;
+    }
+    
+    .offer-timer {
+        flex-wrap: wrap;
+    }
+    
+    .timer-unit {
+        min-width: 60px;
+        padding: 10px;
+    }
+    
+    .timer-value {
+        font-size: 24px;
+    }
+    
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+}

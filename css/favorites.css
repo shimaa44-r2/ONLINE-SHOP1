@@ -1,0 +1,208 @@
+/* صفحة المفضلة */
+.favorites-container {
+    margin-top: 30px;
+}
+
+.filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.sort-select,
+.view-select {
+    padding: 10px 15px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.clear-favorites {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.clear-favorites:hover {
+    background: #cc0000;
+}
+
+.favorites-content {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.favorite-item {
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-item .product-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.favorite-item .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.favorite-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.favorite-item .product-info {
+    padding: 15px;
+}
+
+.favorite-item .product-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.favorite-item .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.favorite-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove-favorite {
+    background: none;
+    border: none;
+    color: var(--danger);
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.remove-favorite:hover {
+    color: #cc0000;
+}
+
+.empty-favorites {
+    text-align: center;
+    padding: 60px 20px;
+    display: none;
+}
+
+.empty-favorites i {
+    font-size: 80px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.empty-favorites h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.empty-favorites p {
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+/* وضع القائمة */
+.favorites-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.favorites-grid.list-view .favorite-item {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 20px;
+    padding: 15px;
+}
+
+.favorites-grid.list-view .product-image {
+    height: 100px;
+    width: 120px;
+}
+
+.favorites-grid.list-view .product-info {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.favorites-grid.list-view .favorite-actions {
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        justify-content: space-between;
+    }
+    
+    .favorites-grid.list-view .favorite-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .favorites-grid.list-view .product-image {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+}

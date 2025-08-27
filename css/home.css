@@ -1,0 +1,266 @@
+/* الهيرو */
+.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: slideInUp 1s ease;
+}
+
+/* الأقسام */
+.categories {
+    padding: 80px 0;
+    background: white;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: var(--light);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+    font-size: 50px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* المنتجات */
+.products {
+    padding: 80px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.product-rating {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #e58900;
+}
+
+.add-to-wishlist {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #777;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-wishlist:hover {
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.view-all {
+    text-align: center;
+}
+
+/* العروض */
+.deals {
+    padding: 80px 0;
+    background: white;
+}
+
+.deal-card {
+    background: linear-gradient(to right, var(--secondary), var(--accent));
+    border-radius: 10px;
+    padding: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deal-content {
+    flex: 1;
+}
+
+.deal-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.deal-timer {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.timer-unit {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 60px;
+}
+
+.timer-value {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.timer-label {
+    font-size: 14px;
+}
+
+.deal-image {
+    flex: 1;
+    text-align: center;
+}
+
+.deal-image img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
